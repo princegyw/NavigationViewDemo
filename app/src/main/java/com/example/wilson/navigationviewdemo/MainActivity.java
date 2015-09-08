@@ -31,10 +31,11 @@ public class MainActivity extends AppCompatActivity
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setHomeAsUpIndicator(R.drawable.actionbar_nav_48); //set Home button Icon
-            actionBar.setDisplayHomeAsUpEnabled(true); //display Home button
+            //set Home button Icon
+            actionBar.setHomeAsUpIndicator(R.drawable.actionbar_nav_48);
+            //display Home button
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
-
     }
 
 
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity
             Log.d("gyw", "MainActivity::onNavigationItemSelected home selected");
         }
         menuItem.setChecked(true);
+        mDrawerLayout.closeDrawers();
 
         return true;
     }
